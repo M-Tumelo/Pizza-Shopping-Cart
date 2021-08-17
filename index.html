@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="simple-grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Pizza</title>
+</head>
+<body>
+    <h2>Perfect Pizza</h2> 
+    <div class="container">
+        <!-- <div class="row hide">
+            <section class="col-12">
+            <h4 class="col-3-sm">Total Budget</h4> <input class="col-9-sm center" type="text" name="budget" id="bola-textbox">
+            <div class="col-12-sm"></div>
+            <h4 class="col-3-sm">Money Left</h4> <input class="col-9-sm center" type="text" name="money" id="bola-textbox">
+            </section>
+            </div>  -->
+        <div class="row">
+            <section class="col-12 show" style="display:none">
+                <h3 class="show">Shopping Cart</h3>
+                <table id="clear-cart">
+                    <thead>
+                        <tr>
+                            <td>Pizza Size</td>
+                            <td>Quantity</td>
+                            <td>Price</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="small" style="display:none">
+                            <td>Small Pizza</td>
+                            <td class="joinTags">
+                                <input type="button" value="+" id="add_small_pizza" class="button">
+                                <input type="text" name="quantity" readonly id="small_pizza" placeholder="0">
+                                <input type="button" value="-" id="minus_small_pizza" class="button">
+                            </td>
+                            <td>R<span class="small_pizza_price">0.00</td>
+                           <td>
+                            <button class="btn trash_smallBtn"><i class="fa fa-trash"></i></button>       
+                        </td>
+                        </tr>
+                        <tr id="medium" style="display:none">
+                            <td>Medium Pizza</td>
+                            <td class="joinTags">
+                                <input type="button" value="+" id="add_mid_pizza" class="button">
+                                <input type="text" name="quantity" readonly id="medium_pizza" placeholder="0">
+                                <input type="button" value="-" id="minus_mid_pizza" class="button">
+                            </td>
+                            <td>R<span class="medium_pizza_price">0.00</td>
+                                <td>
+                                    <button class="btn trash_mediumBtn"><i class="fa fa-trash"></i></button>       
+                                </td>
+                        </tr>
+                        <tr id="large" style="display:none">
+                            <td>Large Pizza</td>
+                            <td class="joinTags">
+                                <input type="button" value="+" id="add_large_pizza" class="button">
+                                <input type="text" name="quantity" readonly id="large_pizza" placeholder="0">
+                                <input type="button" value="-" id="minus_large_pizza" class="button">
+                            </td>
+                            <td>R<span class="large_pizza_price">0.00</td>
+                                <td>
+                                    <button class="btn trash_largeBtn"><i class="fa fa-trash"></i></button>       
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>Total cost</td>
+                            <td></td>
+                            <td><input type="text" name="cost" readonly placeholder="0.00" class="cost total-cost left"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div style="display: none;" class="center space-between-elements theMessage">
+					We will display a message here when the button is pressed...
+				</div>
+                <div class="space-between-elements payment" style="display: none;">
+                        <label for="payment" class="center-label pay"><em>Payment amount:</em></label>
+                        <input type="text" name="pay" id="pay" class="cost">
+                </div>
+                <input type="button" value="Checkout" id="check" class="padding center2 checkout">
+            </section>
+        </div>
+        <div class="row">
+        <section class="col-4 small_pizza">
+            <h3>Small Pizza</h3>
+            <img width=150 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLpK6Cank9ZGS5Rq0iX2Y-jxGulKn1raJVlQ&usqp=CAU" alt="n/a">
+        <p>
+            R29.90 <br>
+            Three layers & a crust crammed with chicken cheese grillers: our secret cream cheese, chicken, mushroom, diced tomato, onion, mozzarella, tomato & herb pizza sauce, topped with Debonairs sauce, cheddar & mozzarella
+        </p>
+        <input type="button" value="Add to order" class="small center2 override_center">
+        </section>
+   <section class="col-4 medium_pizza">
+       <h3>Medium Pizza</h3>
+       <img width=200 width=150 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLpK6Cank9ZGS5Rq0iX2Y-jxGulKn1raJVlQ&usqp=CAU" alt="n/a">
+       <p>
+           R69.90 <br>
+           Three layers & a crust crammed with chicken cheese grillers: our secret cream cheese, chicken, mushroom, diced tomato, onion, mozzarella, tomato & herb pizza sauce, topped with Debonairs sauce, cheddar & mozzarella
+       </p>
+       <input type="button" value="Add to order" class="medium center2 override_center">
+   </section>
+   <section class="col-4 large_pizza">
+    <h3>Large Pizza</h3>
+    <img width=200 width=150 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLpK6Cank9ZGS5Rq0iX2Y-jxGulKn1raJVlQ&usqp=CAU" alt="n/a">
+    <p>
+        R100.90 <br>
+        Three layers & a crust crammed with chicken cheese grillers: our secret cream cheese, chicken, mushroom, diced tomato, onion, mozzarella, tomato & herb pizza sauce, topped with Debonairs sauce, cheddar & mozzarella
+    </p>
+    <input type="button" value="Add to order" class="large center2 override_center">
+</section>
+</div>
+</div>
+<footer class="border">
+    <p>
+        &phone; Contact us at: (021)-541-1000 <br> 	
+        &#9993; Email us at: info@perfectpizza.co.za
+
+    </p>
+</footer>
+</body>
+<script src="shopping_cart.js"></script>
+</html>
